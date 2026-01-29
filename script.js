@@ -4,6 +4,8 @@ const prevBtn = document.querySelector(".carousel-btn.prev");
 const nextBtn = document.querySelector(".carousel-btn.next");
 const nav = document.querySelector(".nav");
 const menuToggle = document.querySelector(".menu-toggle");
+const introLoader = document.querySelector(".intro-loader");
+const body = document.body;
 
 let activeIndex = 0;
 
@@ -46,3 +48,59 @@ nav.querySelectorAll("a").forEach((link) => {
 });
 
 window.addEventListener("resize", updateCarousel);
+
+const revealTargets = [
+  ".hero-content",
+  ".about-card",
+  ".section-heading",
+  ".content-card",
+  ".testimonial-card",
+  ".contact-card",
+  ".site-footer",
+];
+
+const revealElements = revealTargets.flatMap((selector) =>
+  Array.from(document.querySelectorAll(selector))
+);
+
+revealElements.forEach((element, index) => {
+  element.classList.add("reveal");
+  if (index % 3 === 1) {
+    element.classList.add("delay-1");
+  }
+  if (index % 3 === 2) {
+    element.classList.add("delay-2");
+  }
+  if (
+    element.classList.contains("content-card") ||
+    element.classList.contains("testimonial-card") ||
+    element.classList.contains("contact-card")
+  ) {
+    element.classList.add("reveal-sheen");
+  }
+});
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries, entryObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          entryObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("in-view"));
+}
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    introLoader?.classList.add("hide");
+    body.classList.remove("is-loading");
+  }, 2000);
+});
