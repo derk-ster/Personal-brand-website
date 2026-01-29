@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nova Lane | Personal Brand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="logo">Nova Lane</div>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Connect</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-media" role="img" aria-label="Creative studio background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Creator · Coach · Storyteller</p>
+          <h1>Hi, I'm <span>Nova Lane</span></h1>
+          <p class="hero-subtitle">
+            I help ambitious creators design iconic personal brands and turn their
+            audience into a thriving community.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Work With Me</a>
+            <a class="btn ghost" href="#content">Subscribe</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="about-card">
+          <div class="profile-image"></div>
+          <div class="about-copy">
+            <h2>About Nova</h2>
+            <p>
+              Strategy-led, heart-forward. I blend storytelling, design thinking, and
+              community building to elevate brands that lead with purpose.
+            </p>
+            <div class="achievement-loop">
+              <span>3M+ organic views</span>
+              <span>120K subscribers</span>
+              <span>Fortune 500 partnerships</span>
+              <span>Top 1% creator growth</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="content" class="content section">
+        <div class="section-heading">
+          <h2>Featured Content</h2>
+          <p>Fresh insights, signature frameworks, and creator growth playbooks.</p>
+        </div>
+        <div class="content-grid">
+          <article class="content-card">
+            <div class="content-media"></div>
+            <h3>Magnetic Storytelling Series</h3>
+            <p>Five-part video series on building trust-driven narratives.</p>
+            <a href="#" class="content-link">Watch series</a>
+          </article>
+          <article class="content-card">
+            <div class="content-media alt"></div>
+            <h3>Creator Business Blueprint</h3>
+            <p>Weekly newsletter on monetization, systems, and brand clarity.</p>
+            <a href="#" class="content-link">Read latest</a>
+          </article>
+          <article class="content-card">
+            <div class="content-media vibrant"></div>
+            <h3>Social Feed Spotlight</h3>
+            <p>Daily micro-lessons, reels, and community stories.</p>
+            <a href="#" class="content-link">Follow @novalane</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials section">
+        <div class="section-heading">
+          <h2>Endorsements</h2>
+          <p>Trusted by creators, founders, and global brands.</p>
+        </div>
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous testimonial">
+            ‹
+          </button>
+          <div class="carousel-track">
+            <div class="testimonial-card">
+              <p>
+                “Nova helped me triple my email list in 60 days. Her strategy is
+                crystal-clear and action oriented.”
+              </p>
+              <span>— Riya M., Lifestyle Creator</span>
+            </div>
+            <div class="testimonial-card">
+              <p>
+                “The best brand coach I’ve worked with. The storytelling framework
+                alone is worth the investment.”
+              </p>
+              <span>— Jordan K., Startup Founder</span>
+            </div>
+            <div class="testimonial-card">
+              <p>
+                “Our partnership campaign outperformed every KPI. Nova’s creative
+                vision is unmatched.”
+              </p>
+              <span>— Elise T., Brand Director</span>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next testimonial">
+            ›
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <h2>Let’s Create Together</h2>
+            <p>
+              Ready to elevate your presence? Join the inner circle for weekly
+              creator insights and opportunities.
+            </p>
+            <div class="contact-actions">
+              <button class="btn primary">Book a Strategy Call</button>
+              <button class="btn ghost">Download Media Kit</button>
+            </div>
+          </div>
+          <form class="signup-form">
+            <label>
+              Your email
+              <input type="email" placeholder="you@email.com" required />
+            </label>
+            <button class="btn primary" type="submit">Subscribe</button>
+            <small>No spam. Unsubscribe anytime.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Nova Lane. Crafted for visionary creators.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
